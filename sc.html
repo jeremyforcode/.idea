@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script Generator</title>
+    <script language="javascript">
+        function chg(obj) {
+            if (obj.options[obj.selectedIndex].value == "-1")
+                document.getElementById("select_else").style.display = ""
+            else
+                document.getElementById("select_else").style.display = "none";
+        }
+    </script>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        div.top {
+            background-color: white;
+            width: 100%;
+            height: 180px;
+            position: relative;
+        }
+        div.main {
+            /*text-align: center;*/
+            padding: 40px 48px 36px;
+            margin: 0 auto;
+            width: 700px;
+            height: 562px;
+            border:1px solid #999;
+            border-radius: 10px;
+        }
+        div.mainsub {
+
+        }
+        div.info {
+            position: relative;
+            margin-bottom:25px;
+            display: inline-block;
+
+        }
+        div.config {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        input         {
+            font-size:15px;
+
+
+
+
+        }
+        input:focus     {
+
+
+
+        }
+        label          {
+            color:#999;
+            font-size:15px;
+            font-weight:normal;
+            position:absolute;
+            pointer-events:none;
+            left:5px;
+            top:4px;
+            transition:0.2s ease all;
+            background-color: white;
+        }
+
+        /* active state */
+        input:focus ~ label, input:valid ~ label     {
+            top:-11px;
+            font-size:14px;
+            color:#5264AE;
+        }
+        h3 {
+            font-weight: 400;
+            font-family: Arial;
+        }
+        /* Red Google Button as seen on drive.google.com */
+        button.red {
+            background: -webkit-linear-gradient(top, #DD4B39, #D14836);
+            background: -moz-linear-gradient(top, #DD4B39, #D14836);
+            background: -ms-linear-gradient(top, #DD4B39, #D14836);
+            border: 1px solid #DD4B39;
+            color: white;
+            text-shadow: 0 1px 0 #C04131;
+        }
+
+        button.red:hover {
+            background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+            background: -moz-linear-gradient(top, #DD4B39, #C53727);
+            background: -ms-linear-gradient(top, #DD4B39, #C53727);
+            border: 1px solid #AF301F;
+        }
+
+        button.red:active {
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+            background: -webkit-linear-gradient(top, #D74736, #AD2719);
+            background: -moz-linear-gradient(top, #D74736, #AD2719);
+            background: -ms-linear-gradient(top, #D74736, #AD2719);
+        }
+    </style>
+</head>
+
+<body>
+<div class="top"></div>
+<div class="main">
+
+    <form action="">
+        <div style="display:inline-block; float:left; width: 100%; margin-bottom: 19.92px"><iframe src="images/hongkong-hsbc-logo-en.svg" width="177" height="38" frameborder="0"></iframe></div>
+        <div><h2 style="margin-top: 0;">Create LTM Virtual Server</h2></div>
+        <div><h3 style="margin-top: 0;">Requestor Information</h3></div>
+        <div style="position: relative; top: 80px"><img style="width: 30%; height: 30%; float: right" src="images/F5-BIGIP-LTM-ICON.png"/></div>
+        <div class="info">
+            <input type="text" required name="GSR">
+            <label>GSR</label>
+        </div>
+        <div class="info">
+            <input type="text" required name="requestor">
+            <label>Requestor</label>
+        </div>
+        <div class="info">
+            <input type="text" required name="project">
+            <label>Project</label>
+        </div>
+
+        <div><h3 style="margin-top: 0;">LTM Basic Information</h3></div>
+        <div class="info">
+            <input type="text" required name="vip">
+            <label>VIP</label>
+        </div>
+        <div class="info">
+            <input type="text" required name="vipport" style="width: 70px">
+            <label>Port</label>
+        </div>
+        <div class="">
+            <div class="info">
+                <input type="text" required name="server1">
+                <label>Server ip</label>
+            </div>
+            <div class="info">
+                <input type="text" required name="port" style="width: 70px">
+                <label>Port</label>
+                <input type="checkbox" name="staus" value="disable">Disable
+            </div>
+        </div>
+        <div class="">
+            <div class="info">
+                <input type="text" required name="server2">
+                <label>Server ip</label>
+            </div>
+            <div class="info">
+                <input type="text" required name="port" style="width: 70px">
+                <label>Port</label>
+                <input type="checkbox" name="staus" value="disable">Disable
+            </div>
+        </div>
+
+        <div><h3 style="margin-top: 0;">Monitor</h3></div>
+        <div class="info">
+            <select style=" height: 25px;font-size: 16px" onchange="chg(this)">
+                <option selected="selected" value="1">TCP</option>
+                <option value="-1">HTTPS</option>
+            </select>
+            <input id="select_else" nema="monitor" style="display:none;" placeholder="Monitor Link">
+        </div>
+
+        <div style="text-align: center"><button style="font-size: 20px;" class="red">CREATE</button></div>
+    </form>
+
+</div>
+
+
+</body>
+</html>
