@@ -17,31 +17,43 @@
         }
         div.top {
             background-color: white;
-            width: 100%;
-            height: 180px;
+            height: 200px;
             position: relative;
+            width: 100%;
+            top: 0;
+
         }
         div.main {
-            /*text-align: center;*/
-            padding: 40px 48px 36px;
-            margin: 0 auto;
-            width: 700px;
-            height: 562px;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 20px 48px 36px;
+            width: 750px;
+            height: 600px;
             border:1px solid #999;
             border-radius: 10px;
+
+
         }
-        div.mainsub {
+        div.bottom {
+            width: 100%;
+            position: absolute;
+            height: 200px;
+            bottom: 0;
 
         }
         div.info {
             position: relative;
-            margin-bottom:25px;
+            margin-bottom:20px;
             display: inline-block;
 
         }
         div.config {
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         input         {
             font-size:15px;
@@ -76,6 +88,7 @@
         h3 {
             font-weight: 400;
             font-family: Arial;
+            margin-bottom: 10px;
         }
         /* Red Google Button as seen on drive.google.com */
         button.red {
@@ -104,7 +117,7 @@
 </head>
 
 <body>
-<div class="top"></div>
+
 <div class="main">
 
     <form action="">
