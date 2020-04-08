@@ -138,14 +138,14 @@
     <form action="">
         <div style="display:inline-block; float:left; width: 100%; margin-bottom: 19.92px">
             <iframe src="images/hongkong-hsbc-logo-en.svg" width="177" height="38" frameborder="0"></iframe>
-            <a href="/.idea/scgtm.html">
-            <button type="button" class="red" style="font-size: 24px; float: right; display: block; margin-top: 13px;margin-right:25px ">GTM</button>
+            <a href="/.idea/sc.html">
+            <button type="button" class="red" style="font-size: 24px; float: right; display: block; margin-top: 13px;margin-right:25px ">LTM</button>
             </a>
 
         </div>
-        <div><h2 style="margin-top: 0;">Create LTM Virtual Server</h2></div>
+        <div><h2 style="margin-top: 0;">Create GTM Wideip</h2></div>
         <div><h3 style="margin-top: 0;">Requestor Information</h3></div>
-        <div style="position: relative; top: 80px"><img style="position: relative;top: -50px;width: 30%; height: 30%; float: right" src="images/F5-BIGIP-LTM-ICON.png"/></div>
+        <div style="position: relative; top: 80px"><img style="position: relative;top: -50px;width: 30%; height: 30%; float: right" src="images/F5-BIGIP-GTM-ICON.png"/></div>
         <div class="info">
             <input type="text" required name="GSR">
             <label>GSR</label>
@@ -159,14 +159,14 @@
             <label>Project</label>
         </div>
 
-        <div><h3 style="margin-top: 0;">LTM Basic Information</h3></div>
+        <div><h3 style="margin-top: 0;">GTM Basic Information</h3></div>
         <div class="info">
-            <input type="text" required name="vip">
-            <label>VIP</label>
+            <input type="text" required name="wideip">
+            <label>FQDN</label>
         </div>
         <div class="info">
-            <input type="text" required name="vipport" style="width: 70px">
-            <label>Port</label>
+            <input type="text" required name="wideip">
+            <label>Wideip</label>
         </div>
         <div class="">
             <div class="info">
@@ -198,9 +198,10 @@
 
         <div><h3 style="margin-top: 0;">Monitor</h3></div>
         <div class="info">
-            <select style=" height: 25px;font-size: 16px" onchange="chg(this)">
+            <select style="height: 25px;font-size: 16px" onchange="chg(this)">
                 <option selected="selected" value="1">TCP</option>
                 <option value="-1">HTTPS</option>
+                <option>ICMP</option>
             </select>
             <input id="select_else" nema="monitor" style="display:none;" placeholder="Monitor Link">
         </div>
